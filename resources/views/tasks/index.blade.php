@@ -11,12 +11,12 @@
 
     <div class="block">
 
-        <ul>
+        <ul class="list-group">
             @foreach($tasks as $task)
             <div class="box">
                 
                 <li>
-                    <a href="{{ route('tasks.show', ['task' => $task->id]) }}">
+                    <a href="{{ route('tasks.show', ['task' => $task->id]) }}" class="list-group-item list-group-item-action">
                         {{ $task->title }}
                     </a>
                 </li>
@@ -27,7 +27,7 @@
     </div>
     
     <div class="block">
-        <a href="{{ route('tasks.create') }}" class="button is-link">Create Task</a>
+        <a href="{{ route('tasks.create') }}" class="btn btn-primary mt-5">Create Task</a>
     </div>
 
 
